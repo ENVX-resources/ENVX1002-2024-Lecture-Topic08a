@@ -225,7 +225,7 @@ t.test(group1, group2)$statistic
 Putting it all together, we can write a function to obtain the test statistic:
 
 ```{r}
-#| code-fold: true
+#| code-fold: false
 
 random_t <- function(data) {
   shuffled_data <- sample(data)
@@ -236,15 +236,8 @@ random_t <- function(data) {
 }
 ```
 
-If we use the function with the same seed the result should be identical to before:
 
-```{r}
-# Test the function
-set.seed(1022)
-random_t(pooled_data)
-```
-
-Repeat the function 100,000 times:
+Repeat the function 10,000 times:
 
 ```{r}
 #| code-fold: false
